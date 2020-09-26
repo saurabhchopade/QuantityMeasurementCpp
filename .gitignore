@@ -1,0 +1,10 @@
+*
+!main/
+
+!.gitignore
+
+!test/
+
+!CMakeLists.txt
+
+!sh.sh
