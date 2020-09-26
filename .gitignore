@@ -1,12 +1,33 @@
-*
-!*/
+# Prerequisites
+*.d
 
-!main/
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
 
-!.gitignore
+# Precompiled Headers
+*.gch
+*.pch
 
-!test/
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
 
-!CMakeLists.txt
+# Fortran module files
+*.mod
+*.smod
 
-!sh.sh
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+*.vscode

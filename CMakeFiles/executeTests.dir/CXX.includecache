@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/saurabh/Desktop/cpp/QuantityMeasurementCpp/main/feet.cpp
+feet.h
+/home/saurabh/Desktop/cpp/QuantityMeasurementCpp/main/feet.h
+
+/home/saurabh/Desktop/cpp/QuantityMeasurementCpp/main/feet.h
+iostream
+-
+
+/home/saurabh/Desktop/cpp/QuantityMeasurementCpp/test/feetTest.cpp
+../main/feet.h
+/home/saurabh/Desktop/cpp/QuantityMeasurementCpp/main/feet.h
+gtest/gtest.h
+-
+
