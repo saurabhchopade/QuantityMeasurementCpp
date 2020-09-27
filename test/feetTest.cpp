@@ -58,10 +58,16 @@ TEST(QuantityInchTests, _1inch_and_2inch__should_not_be_equal) {
     ASSERT_FALSE(first_one_inch == second_two_inch);
 }
 
-TEST(QuantityInchTests, _1inch_and_1inch__should_be_equal) { 
+TEST(QuantityInchTests, _3feet_and_1yard__should_be_equal) { 
     Quantity first_one_inch(3.0, &Length::FEET);
-    Quantity seconf_one_inch(1.0, &Length::YARD);
-    ASSERT_EQ(first_one_inch, seconf_one_inch);
+    Quantity second_one_inch(1.0, &Length::YARD);
+    ASSERT_EQ(first_one_inch, second_one_inch);
+}
+
+TEST(QuantityTests, _1feet_and_1yard__should_not_be_equal) { 
+    Quantity first_one_feet(1.0, &Length::FEET);
+    Quantity second_one_yard(1.0, &Length::YARD);
+    ASSERT_NE(first_one_feet, second_one_yard);
 }
 
 int main(int argc, char **argv) {

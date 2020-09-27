@@ -11,11 +11,13 @@ double Quantity::get_base_value() const {
 bool Quantity::operator== (std::any other) const {
     Quantity* otherQuantityConversion = (std::any_cast<Quantity>(&other) == nullptr) ? std::any_cast<Quantity*>(other) : std::any_cast<Quantity>(&other);
 
-    return this->get_base_value() == otherQuantityConversion->get_base_value();   
+    return this->get_base_value() == otherQuantityConversion->get_base_value() &&   
+            this->unit->get_base_unit() == otherQuantityConversion->unit->get_base_unit();   
 }
 
 bool Quantity::operator!= (std::any other) const {
     Quantity* otherQuantityConversion = (std::any_cast<Quantity>(&other) == nullptr) ? std::any_cast<Quantity*>(other) : std::any_cast<Quantity>(&other);
 
-    return this->get_base_value() == otherQuantityConversion->get_base_value();   
+    return !(this->get_base_value() == otherQuantityConversion->get_base_value() && 
+            this->unit->get_base_unit() == otherQuantityConversion->unit->get_base_unit());   
 }
