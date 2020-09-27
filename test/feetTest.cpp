@@ -94,6 +94,12 @@ TEST(QuantityTests, _1yard_and_3feet__should_be_equal) {
     ASSERT_EQ(first_one_yard, second_one_feet);
 }
 
+TEST(QuantityTests, _2inch_and_5cm__should_be_equal) { 
+    Quantity first_one_inch(2.0, &Length::INCH);
+    Quantity second_one_cm(5.0, &Length::CM);
+    ASSERT_EQ(first_one_inch, second_one_cm);
+}
+
 int main(int argc, char **argv) {
     testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();

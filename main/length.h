@@ -11,4 +11,5 @@ public:
     static Length INCH;
     static Length FEET;
     static Length YARD;
+    static Length CM;
 };
