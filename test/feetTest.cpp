@@ -70,6 +70,12 @@ TEST(QuantityTests, _1feet_and_1yard__should_not_be_equal) {
     ASSERT_NE(first_one_feet, second_one_yard);
 }
 
+TEST(QuantityTests, _1inch_and_1yard__should_not_be_equal) { 
+    Quantity first_one_inch(1.0, &Length::INCH);
+    Quantity second_one_yard(1.0, &Length::YARD);
+    ASSERT_NE(first_one_inch, second_one_yard);
+}
+
 int main(int argc, char **argv) {
     testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
