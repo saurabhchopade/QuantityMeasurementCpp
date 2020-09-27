@@ -1,5 +1,6 @@
 #include "../main/length.h"
 #include "../main/volume.h"
+#include "../main/weight.h"
 #include <gtest/gtest.h>
 #include "../main/quantity.h"
 
@@ -153,6 +154,18 @@ TEST(QuantityTests, _1litre_and_1000ml_equal_to_2litres_should_be_equal) {
     Quantity second_1000ml(1000.00, &Volume::ML);
     Quantity third_addition_volumes(2.0, &Volume::LITRES);
     ASSERT_EQ(third_addition_volumes, first_one_litre + second_1000ml);
+}
+
+TEST(QuantityTests, _1kg_and_1000gm__should_be_equal) { 
+    Quantity first_one_kg(1.00, &Weight::KG);
+    Quantity second_1000_gm(1000.00, &Weight::GRAM);
+    ASSERT_EQ(first_one_kg, second_1000_gm);
+}
+
+TEST(QuantityTests, _1tonne_and_1000kg__should_be_equal) { 
+    Quantity first_one_tonee(1.00, &Weight::TONNE);
+    Quantity second_1000_kg(1000.00, &Weight::KG);
+    ASSERT_EQ(first_one_tonee, second_1000_kg);
 }
 
 int main(int argc, char **argv) {
