@@ -34,6 +34,11 @@ TEST(InchTests, _0inch_and_0inch__should_be_equal) {
     ASSERT_EQ(first_zero_inch, second_zero_inch);
 }
 
+TEST(InchTests, _null_inch_and_1inch__should_not_be_equal) { 
+    Inch first_one_inch(1);
+    ASSERT_FALSE(first_one_inch == nullptr);
+}
+
 int main(int argc, char **argv) {
     testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
