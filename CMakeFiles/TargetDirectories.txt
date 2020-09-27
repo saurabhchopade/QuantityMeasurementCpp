@@ -1,3 +1,0 @@
-/home/saurabh/Desktop/cpp/QuantityMeasurementCpp/CMakeFiles/rebuild_cache.dir
-/home/saurabh/Desktop/cpp/QuantityMeasurementCpp/CMakeFiles/edit_cache.dir
-/home/saurabh/Desktop/cpp/QuantityMeasurementCpp/CMakeFiles/executeTests.dir
