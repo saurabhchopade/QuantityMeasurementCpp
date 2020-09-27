@@ -141,6 +141,13 @@ TEST(QuantityTests, _1litre_and_100ml__should_be_equal) {
     ASSERT_EQ(first_one_litre, second_100_ml);
 }
 
+TEST(QuantityTests, _1gallon_and_3_point_78litres_equal_to_7point_57litre_should_be_equal) { 
+    Quantity first_gallon(1.0, &Volume::GALLON);
+    Quantity second_litre(3.78, &Volume::LITRES);
+    Quantity third_addition_litres(7.56, &Volume::LITRES);
+    ASSERT_EQ(third_addition_litres, first_gallon + second_litre);
+}
+
 int main(int argc, char **argv) {
     testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
