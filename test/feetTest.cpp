@@ -50,6 +50,11 @@ TEST(InchTests, _same_type_For_inch__should_be_equal) {
     ASSERT_EQ(first_one_inch, first_one_inch);
 }
 
+TEST(InchTests, _1inch_and_2inch__should_not_be_equal) { 
+    Inch first_one_inch(1.0), second_two_inch(2.0); 
+    ASSERT_FALSE(first_one_inch == second_two_inch);
+}
+
 int main(int argc, char **argv) {
     testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
