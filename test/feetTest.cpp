@@ -1,4 +1,5 @@
 #include "../main/length.h"
+#include "../main/volume.h"
 #include <gtest/gtest.h>
 #include "../main/quantity.h"
 
@@ -126,6 +127,12 @@ TEST(QuantityTests, _2inch_and_2_point_5cm_equal_to_3inch_should_be_equal) {
     Quantity second_2point_five_cm(2.5, &Length::CM);
     Quantity third_3_inch(3.0, &Length::INCH);
     ASSERT_EQ(third_3_inch, first_two_inch + second_2point_five_cm);
+}
+
+TEST(QuantitywTests, _1gallon_and_3point_seven_eight_litres__should_be_equal) { 
+    Quantity first_one_gallon(1000.00, &Volume::GALLON);
+    Quantity second_3point_seven_eight_litres(3780.00, &Volume::LITRES);
+    ASSERT_EQ(first_one_gallon, second_3point_seven_eight_litres);
 }
 
 int main(int argc, char **argv) {
