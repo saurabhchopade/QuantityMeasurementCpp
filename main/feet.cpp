@@ -6,9 +6,8 @@ Feet::Feet(double value) {
 }
 
 bool Feet::operator== (Feet other) const {
-    return ((this->value == other.value) &&  typeid(this->value).name() 
-            ==  typeid(other.value).name());
-    
+    return ((this->value == other.value) && (typeid(this->value).name() 
+            ==  typeid(other.value).name()));
 }
 
 bool Feet::operator== (Feet *other) const {
