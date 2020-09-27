@@ -1,4 +1,5 @@
 #include "../main/feet.h"
+#include "../main/inch.h"
 #include <gtest/gtest.h>
 
 TEST(FeetTests, _0feet_and_0feet__should_be_equal) { 
@@ -25,6 +26,12 @@ TEST(FeetTests, _same_type_For_feet__should_be_equal) {
 TEST(FeetTests, _1feet_and_2feet__should_not_be_equal) { 
     Feet first_one_feet(1.0), second_two_feet(2.0); 
     ASSERT_FALSE(first_one_feet == second_two_feet);
+}
+
+
+TEST(InchTests, _0inch_and_0inch__should_be_equal) { 
+    Inch first_zero_inch(0), second_zero_inch(0); 
+    ASSERT_EQ(first_zero_inch, second_zero_inch);
 }
 
 int main(int argc, char **argv) {
