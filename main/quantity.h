@@ -10,4 +10,5 @@ public:
     double get_base_value() const;
     bool operator== (std::any other) const;
     bool operator!= (std::any other) const;
+    Quantity operator+ (Quantity other) const;
 };

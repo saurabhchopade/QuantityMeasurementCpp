@@ -100,6 +100,13 @@ TEST(QuantityTests, _2inch_and_5cm__should_be_equal) {
     ASSERT_EQ(first_one_inch, second_one_cm);
 }
 
+TEST(QuantityTests, _2inch_and_2inch_equal_to_4inch_should_be_equal) { 
+    Quantity first_two_inch(2.0, &Length::INCH);
+    Quantity second_two_inch(2.0, &Length::INCH);
+    Quantity third_four_inch(4.0, &Length::INCH);
+    ASSERT_EQ(third_four_inch, first_two_inch + second_two_inch);
+}
+
 int main(int argc, char **argv) {
     testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
