@@ -168,6 +168,14 @@ TEST(QuantityTests, _1tonne_and_1000kg__should_be_equal) {
     ASSERT_EQ(first_one_tonee, second_1000_kg);
 }
 
+
+TEST(QuantityTests, _1tonne_and_1000gm_equal_to_1001kg_should_be_equal) { 
+    Quantity first_one_tonne(1.0, &Weight::TONNE);
+    Quantity second_1000_gm(1000.00, &Weight::GRAM);
+    Quantity third_addition_1001kg(1001.00, &Weight::KG);
+    ASSERT_EQ(third_addition_1001kg, second_1000_gm + first_one_tonne);
+}
+
 int main(int argc, char **argv) {
     testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
