@@ -7,8 +7,8 @@ TEST(FeetTests, _0feet_and_0feet__should_be_equal) {
 }
 
 TEST(FeetTests, _null_feet_and_1feet__should_not_be_equal) { 
-    Feet first_zero_feet(1);
-    ASSERT_FALSE(first_zero_feet == nullptr);
+    Feet first_one_feet(1);
+    ASSERT_FALSE(first_one_feet == nullptr);
 }
 
 TEST(FeetTests, _same_Ref_for_feet__should_be_equal) { 
@@ -18,13 +18,13 @@ TEST(FeetTests, _same_Ref_for_feet__should_be_equal) {
 }
 
 TEST(FeetTests, _same_type_For_feet__should_be_equal) { 
-    Feet first_zero_feet(1), second_zero_feet(1); 
-    ASSERT_EQ(first_zero_feet, second_zero_feet);
+    Feet first_one_feet(1), second_one_feet(1); 
+    ASSERT_EQ(first_one_feet, first_one_feet);
 }
 
 TEST(FeetTests, _1feet_and_2feet__should_not_be_equal) { 
-    Feet first_zero_feet(1.0), second_zero_feet(2.0); 
-    ASSERT_FALSE(first_zero_feet == second_zero_feet);
+    Feet first_one_feet(1.0), second_two_feet(2.0); 
+    ASSERT_FALSE(first_one_feet == second_two_feet);
 }
 
 int main(int argc, char **argv) {
