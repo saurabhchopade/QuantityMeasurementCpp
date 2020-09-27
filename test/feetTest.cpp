@@ -129,10 +129,16 @@ TEST(QuantityTests, _2inch_and_2_point_5cm_equal_to_3inch_should_be_equal) {
     ASSERT_EQ(third_3_inch, first_two_inch + second_2point_five_cm);
 }
 
-TEST(QuantitywTests, _1gallon_and_3point_seven_eight_litres__should_be_equal) { 
+TEST(QuantityTests, _1gallon_and_3point_seven_eight_litres__should_be_equal) { 
     Quantity first_one_gallon(1000.00, &Volume::GALLON);
     Quantity second_3point_seven_eight_litres(3780.00, &Volume::LITRES);
     ASSERT_EQ(first_one_gallon, second_3point_seven_eight_litres);
+}
+
+TEST(QuantityTests, _1litre_and_100ml__should_be_equal) { 
+    Quantity first_one_litre(1.00, &Volume::LITRES);
+    Quantity second_100_ml(1000.00, &Volume::ML);
+    ASSERT_EQ(first_one_litre, second_100_ml);
 }
 
 int main(int argc, char **argv) {
