@@ -39,6 +39,12 @@ TEST(InchTests, _null_inch_and_1inch__should_not_be_equal) {
     ASSERT_FALSE(first_one_inch == nullptr);
 }
 
+TEST(InchTests, _same_Ref_for_inch__should_be_equal) { 
+    Inch *first_ref = new Inch(1.0);
+    Inch *second_ref = first_ref;
+    ASSERT_EQ(first_ref, second_ref);
+}
+
 int main(int argc, char **argv) {
     testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
