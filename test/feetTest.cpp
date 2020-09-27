@@ -17,6 +17,11 @@ TEST(FeetTests, _same_Ref_for_feet__should_be_equal) {
     ASSERT_EQ(first_ref, second_ref);
 }
 
+TEST(FeetTests, _same_type_For_feet__should_be_equal) { 
+    Feet first_zero_feet(1), second_zero_feet(1); 
+    ASSERT_EQ(first_zero_feet, second_zero_feet);
+}
+
 int main(int argc, char **argv) {
     testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
