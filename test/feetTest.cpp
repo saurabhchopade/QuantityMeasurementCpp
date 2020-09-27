@@ -45,6 +45,11 @@ TEST(InchTests, _same_Ref_for_inch__should_be_equal) {
     ASSERT_EQ(first_ref, second_ref);
 }
 
+TEST(InchTests, _same_type_For_inch__should_be_equal) { 
+    Inch first_one_inch(1), second_one_inch(1); 
+    ASSERT_EQ(first_one_inch, first_one_inch);
+}
+
 int main(int argc, char **argv) {
     testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
